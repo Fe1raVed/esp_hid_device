@@ -582,12 +582,12 @@ void ble_hid_task_start_up(void)
     xTaskCreate(ble_hid_demo_task, "ble_hid_demo_task", 2 * 1024, NULL, configMAX_PRIORITIES - 3,
                 &s_ble_hid_param.task_hdl);
 #elif CONFIG_EXAMPLE_HID_DEVICE_ROLE == 1
-    xTaskCreate(ble_hid_demo_task, "ble_hid_demo_task", 3 * 1024, NULL, configMAX_PRIORITIES - 3,
+    xTaskCreate(ble_hid_demo_task, "ble_hid_demo_task", 2048 * 3, NULL, configMAX_PRIORITIES - 3,
                 &s_ble_hid_param.task_hdl);
 
 #elif CONFIG_EXAMPLE_HID_DEVICE_ROLE == 2
     /* Nimble Specific */
-    xTaskCreate(ble_hid_demo_task_kbd, "ble_hid_demo_task_kbd", 3 * 1024, NULL, configMAX_PRIORITIES - 3,
+    xTaskCreate(ble_hid_demo_task_kbd, "ble_hid_demo_task_kbd", 2048 * 3, NULL, configMAX_PRIORITIES - 3,
                 &s_ble_hid_param.task_hdl);
 #elif CONFIG_EXAMPLE_HID_DEVICE_ROLE == 3
     /* Nimble Specific */
