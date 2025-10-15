@@ -38,6 +38,6 @@ jobs:
         path: |
           build/bootloader/bootloader.bin
           build/partition_table/partition-table.bin
-          build/led_wifi.bin
+          build/esp_hid_device.bin
         if-no-files-found: error
         retention-days: 5
